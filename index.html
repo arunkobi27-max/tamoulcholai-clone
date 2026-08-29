@@ -4,8 +4,274 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tamoul Cholai - France</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Reset & Base Fonts */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #e9ecef;
+            color: #333;
+        }
+
+        /* Top Announcement Bar */
+        .top-announcement {
+            background-color: #b71c1c;
+            color: #fff;
+            padding: 6px 20px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .login-btn {
+            color: #fff;
+            background-color: #333;
+            padding: 3px 10px;
+            text-decoration: none;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+
+        /* Main Header */
+        .main-header {
+            background: linear-gradient(to right, #800000, #b71c1c);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ffcc00;
+        }
+
+        .site-title {
+            font-size: 32px;
+            color: #ffcc00;
+            letter-spacing: 1px;
+        }
+
+        .site-sub {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        .site-french {
+            font-size: 13px;
+            color: #ddd;
+            margin-top: 3px;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #1a252f;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu li a {
+            display: block;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            font-size: 14px;
+            border-right: 1px solid #2c3e50;
+        }
+
+        .nav-menu li a:hover, .nav-menu li a.active {
+            background-color: #b71c1c;
+            color: #ffcc00;
+        }
+
+        /* Tagline Banner */
+        .tagline-banner {
+            background-color: #fff8e1;
+            border-bottom: 1px solid #ffe082;
+            padding: 12px 20px;
+            text-align: center;
+        }
+
+        .tagline-banner h2 {
+            font-size: 15px;
+            color: #5d4037;
+            font-weight: normal;
+        }
+
+        /* Container Layout */
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            display: flex;
+            gap: 20px;
+            padding: 0 10px;
+        }
+
+        .main-content {
+            flex: 3;
+        }
+
+        .sidebar {
+            flex: 1;
+        }
+
+        /* Section Boxes */
+        .section-box {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: #800000;
+            border-bottom: 2px solid #800000;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Event Cards */
+        .event-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .event-card {
+            display: flex;
+            border: 1px solid #e0e0e0;
+            border-left: 4px solid #b71c1c;
+            border-radius: 4px;
+            background: #fafafa;
+        }
+
+        .event-date {
+            background: #b71c1c;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            min-width: 65px;
+        }
+
+        .event-date .month {
+            display: block;
+            font-size: 12px;
+        }
+
+        .event-date .day {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .event-details {
+            padding: 10px 15px;
+        }
+
+        .event-details h3 {
+            font-size: 15px;
+            color: #333;
+        }
+
+        .event-details p {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        /* News List */
+        .news-list {
+            list-style: none;
+        }
+
+        .news-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+            font-size: 14px;
+        }
+
+        .news-list i {
+            color: #b71c1c;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+
+        /* Sidebar Widgets */
+        .widget {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .widget-title {
+            background: #800000;
+            color: white;
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        .widget-body {
+            padding: 15px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .widget-body hr {
+            border: 0;
+            border-top: 1px solid #eee;
+            margin: 8px 0;
+        }
+
+        .useful-links {
+            list-style: none;
+            padding: 10px 15px;
+        }
+
+        .useful-links li {
+            padding: 6px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .useful-links a {
+            color: #0277bd;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #888;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        /* Responsive (Mobile) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .nav-menu {
+                flex-direction: column;
+            }
+            .nav-menu li a {
+                border-right: none;
+                border-bottom: 1px solid #2c3e50;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -103,7 +369,7 @@
 
         </main>
 
-        <!-- Right Sidebar (Address & Useful Links) -->
+        <!-- Right Sidebar -->
         <aside class="sidebar">
             <div class="widget">
                 <h3 class="widget-title">தொடர்பு கொள்ள</h3>
